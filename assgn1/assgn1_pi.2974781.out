@@ -1,0 +1,78 @@
+Node: c306-006.ls6.tacc.utexas.edu
+CPUs allocated: 128
+
+=== Q2(a): Thread placement (MAX threads) ===
+PLACES=cores PROC_BIND=close THREADS=128
+Pi = 3.141592653590
+Time = 0.267533 seconds
+
+PLACES=cores PROC_BIND=spread THREADS=128
+Pi = 3.141592653590
+Time = 0.269385 seconds
+
+PLACES=sockets PROC_BIND=close THREADS=128
+Pi = 3.141592653590
+Time = 0.293718 seconds
+
+PLACES=sockets PROC_BIND=spread THREADS=128
+Pi = 3.141592653590
+Time = 0.290274 seconds
+
+=== Q2(c-i): Scaling (cores/close) ===
+Threads=1
+Pi = 3.141592653590
+Time = 0.013932 seconds
+
+Threads=2
+Pi = 3.141592653590
+Time = 0.007007 seconds
+
+Threads=4
+Pi = 3.141592653590
+Time = 0.003571 seconds
+
+Threads=8
+Pi = 3.141592653590
+Time = 0.002076 seconds
+
+Threads=16
+Pi = 3.141592653590
+Time = 0.001312 seconds
+
+Threads=32
+Pi = 3.141592653590
+Time = 0.001466 seconds
+
+Threads=64
+Pi = 3.141592653590
+Time = 0.001773 seconds
+
+Threads=128
+Pi = 3.141592653590
+Time = 0.005394 seconds
+
+=== Q2(c-ii): Scheduling (MAX threads, cores/close) ===
+OMP_SCHEDULE=static,10
+Pi = 3.141592653590
+Time = 0.007970 seconds
+
+OMP_SCHEDULE=static,100
+Pi = 3.141592653590
+Time = 0.002701 seconds
+
+OMP_SCHEDULE=static,1000
+Pi = 3.141592653590
+Time = 0.009894 seconds
+
+OMP_SCHEDULE=dynamic,10
+Pi = 3.141592653590
+Time = 0.033190 seconds
+
+OMP_SCHEDULE=dynamic,100
+Pi = 3.141592653590
+Time = 0.005938 seconds
+
+OMP_SCHEDULE=dynamic,1000
+Pi = 3.141592653590
+Time = 0.003140 seconds
+
